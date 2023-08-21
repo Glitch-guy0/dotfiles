@@ -1,0 +1,103 @@
+# ~/.config/starship.toml
+
+add_newline = true
+command_timeout = 1000
+format = """$all$os$username$directory$character"""
+
+
+# ---
+
+[os]
+format = '[$symbol](bold bright-cyan)'   
+disabled = false
+
+[os.symbols]
+Windows = ' '
+Arch = '󰣇 '
+Ubuntu = ' '
+Macos = '󰀵 '
+
+# ---
+
+# Shows the username
+[username]
+style_user = 'bright-blue bold'
+style_root = 'bright-red bold'
+format = '[$user]($style) '
+disabled = false
+show_always = true
+
+# Shows the hostname
+[hostname]
+ssh_only = true
+format = 'on [$hostname](bold yellow) '
+disabled = false
+
+# Shows current directory
+[directory]
+truncation_length = 1
+truncation_symbol = '…/'
+home_symbol = '~'
+read_only_style = '197'
+read_only = '  '
+format = 'at [$path]($style)[$read_only]($read_only_style) '
+
+# Shows current git branch
+[git_branch]
+symbol = ' '
+format = 'via [$symbol$branch]($style)'
+# truncation_length = 4
+truncation_symbol = '…/'
+style = 'bold green'
+
+# Shows current git status
+[git_status]
+format = '[$all_status$ahead_behind]($style) '
+style = 'bold green'
+conflicted = ' 🏳 '
+up_to_date = ''
+untracked = '  '
+ahead = ' ${count}'
+diverged = '  ${ahead_count} ${behind_count} '
+behind = ' ${count}'
+stashed = '  '
+modified = '  '
+staged = ' [++\($count\)](green)'
+renamed = '  '
+deleted = '  '
+
+# Shows kubernetes context and namespace
+[kubernetes]
+format = 'via [󱃾 $context\($namespace\)](bold purple) '
+disabled = false
+
+#local ip
+[localip]
+ssh_only = false
+format = ' [$localipv4](bold purple) '
+disabled = false
+
+# ---
+
+[vagrant]
+disabled = true
+
+[docker_context]
+disabled = true
+
+[helm]
+disabled = true
+
+[python]
+disabled = false
+symbol = ' '
+style = 'bold bright-green'
+
+[nodejs]
+disabled = true
+
+[ruby]
+disabled = true
+
+[terraform]
+disabled = true

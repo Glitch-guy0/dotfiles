@@ -16,6 +16,8 @@ Windows = ' '
 Arch = '󰣇 '
 Ubuntu = ' '
 Macos = '󰀵 '
+Unknown = ' '
+Fedora = ' '
 
 # ---
 
@@ -55,7 +57,7 @@ style = 'bold green'
 format = '[$all_status$ahead_behind]($style) '
 style = 'bold green'
 conflicted = ' 🏳 '
-up_to_date = ''
+up_to_date = '  '
 untracked = '  '
 ahead = ' ${count}'
 diverged = '  ${ahead_count} ${behind_count} '
@@ -77,16 +79,37 @@ ssh_only = false
 format = ' [$localipv4](bold purple) '
 disabled = false
 
-# ---
+# --- 
+
+[java]
+disabled = false
+symbol = ' '
+style = 'bright-red bold'
+
+[kotlin]
+disabled = false
+symbol = ' '
+style = 'bright-purple bold'
 
 [vagrant]
-disabled = true
+disabled = false
+symbol = ' '
+style = 'bright-blue bold'
 
 [docker_context]
-disabled = true
+disabled = false
+style = 'bright-blue bold'
+symbol = ' '
 
-[helm]
-disabled = true
+[golang]
+disabled = false
+symbol = ' '
+style = 'bold blue'
+
+[rust]
+disabled = false
+symbol = ' '
+style = 'bold yellow'
 
 [python]
 disabled = false
@@ -94,10 +117,16 @@ symbol = ' '
 style = 'bold bright-green'
 
 [nodejs]
-disabled = true
+disabled = false
+symbol = ' '
+style = 'bold bright-green'
 
 [ruby]
-disabled = true
+disabled = false
+symbol = ' '
+style = 'bold red'
 
 [terraform]
-disabled = true
+disabled = false
+symbol = ' '
+style = 'bold bright-purple'

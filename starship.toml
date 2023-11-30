@@ -2,13 +2,13 @@
 
 add_newline = true
 command_timeout = 1000
-format = """$all$os$username$directory$character"""
+format = """$os$all$username$directory$character"""
 
 
 # ---
 
 [os]
-format = '[$symbol](bold bright-cyan)'   
+format = ' [$symbol](bold bright-cyan)'   
 disabled = false
 
 [os.symbols]
